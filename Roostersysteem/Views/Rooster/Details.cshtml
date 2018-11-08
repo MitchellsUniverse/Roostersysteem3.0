@@ -1,0 +1,50 @@
+﻿@model Roostersysteem.Models.Rooster
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Rooster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Klas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Klas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersoonVak.PersoonVak_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersoonVak.PersoonVak_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VakLokaalType.VakLokaalType_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VakLokaalType.VakLokaalType_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VakUrenCollege.VakUrenCollege_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VakUrenCollege.VakUrenCollege_Id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RoosterId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

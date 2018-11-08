@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Roostersysteem</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Styles.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container col-lg-12">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="~/Home/Index">
+                    Roostersysteem
+                    <img src="~/Images/ZuydMiniLogo.png">
+                </a>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-collapsible">
+                <ul class="nav navbar-nav navbar-left">
+
+                    <li class=" dropdown">
+                        <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vakgegevens <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class=" dropdown">
+                                @Html.ActionLink("Vakken", "Index", "Vak")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Contacturen vak wijzigen", "Index", "VakUrenCollege")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Vakken Koppelen aan docenten", "Index", "PersoonVak")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Lokalen Types", "Index", "LokaalType")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Vakken indelen in lokalen", "Index", "VakLokaalType")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Colleges", "Index", "UrenCollege")
+                            </li>
+                        </ul>
+                    </li>
+                    <li class=" dropdown">
+                        <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rooster<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class=" dropdown">
+                                @Html.ActionLink("Rooster", "Index", "Rooster")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Uren Opvragen", "Index", "UrenRoosteraar")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Persoon Uren", "Index", "Persoonuren")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Beschikbaarheid Opvragen", "Index", "Rooster")
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        @Html.ActionLink("Beschikbaarheid doorgeven", "Index", "UrenBeschikbaarheid")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Uren Opvragen", "Index", "UrenRoosteraar")
+                    </li>
+                </ul>
+                <div class="navbar-right">
+                    <form class="navbar-form  ">
+                        <div class="form-group" style="display:inline;">
+                            <ul class="nav navbar-nav ">
+                                <li class=" dropdown">
+                                    <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ingelogd als  <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li>@Html.ActionLink("Mijn gegevens", "Index", "Persoon")</li>
+                                    </ul>
+                                </li>
+                                <li class=""><a href="~/Home/Index">Uitloggen</a></li> @* Max veranderen: link naar je inlogpagina*@
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-2 col-md-2" style="float:right; max-width:200px !important;">
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" id="Zoekbalk" class="form-control" placeholder="Zoeken" name="q">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit" style="border-color: red !important"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content col-lg-12">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Roostersysteem casusgroep 2.1</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

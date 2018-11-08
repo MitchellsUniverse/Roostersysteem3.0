@@ -1,0 +1,48 @@
+﻿@model Roostersysteem.Models.VakUrenCollege
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>VakUrenCollege</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Vakduur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vakduur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrenCollege.CollegeNaam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrenCollege.CollegeNaam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vak.VakNaam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vak.VakNaam)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
