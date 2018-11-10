@@ -19,6 +19,7 @@ namespace Roostersysteem.Controllers
         {
             var vakUrenColleges = db.VakUrenColleges.Include(v => v.UrenCollege).Include(v => v.Vak);
             return View(vakUrenColleges.ToList());
+
         }
 
         // GET: VakUrenCollege/Details/5

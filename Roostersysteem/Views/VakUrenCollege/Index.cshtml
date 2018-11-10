@@ -9,6 +9,8 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@* header van de tabel*@
 <table class="table">
     <tr>
         <th>
@@ -23,6 +25,7 @@
         <th></th>
     </tr>
 
+@* Invulling tabel per regel*@
 @foreach (var item in Model) {
     <tr>
         <td>
