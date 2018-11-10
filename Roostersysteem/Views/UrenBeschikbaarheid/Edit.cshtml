@@ -4,7 +4,7 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Wijzigen</h2>
 
 
 @using (Html.BeginForm())
@@ -12,13 +12,13 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>UrenBeschikbaarheid</h4>
+        <h4>Uren beschikbaarheid</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.UrenBeschikbaarheidId)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TijdstipBeschikbaarheid, htmlAttributes: new { @class = "control-label col-md-2" })
+            <p class="col-md-2">Tijdstip ingeven in YYYY-MM-DD <br /> HH-MM-SS</p>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.TijdstipBeschikbaarheid, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.TijdstipBeschikbaarheid, "", new { @class = "text-danger" })
@@ -26,7 +26,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DagBeschikbaarheid, htmlAttributes: new { @class = "control-label col-md-2" })
+            <p class="col-md-2">Dag ingeven</p>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DagBeschikbaarheid, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.DagBeschikbaarheid, "", new { @class = "text-danger" })
@@ -42,7 +42,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Terug naar het overzicht", "Index")
 </div>
 
 @section Scripts {

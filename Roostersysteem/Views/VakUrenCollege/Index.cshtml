@@ -4,23 +4,23 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Overzicht vakuren per college</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nieuwe toevoegen", "Create")
 </p>
 
 @* header van de tabel*@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Vakduur)
+            Aantal uur:
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.UrenCollege.CollegeNaam)
+            Soort college:
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Vak.VakNaam)
+            Vak:
         </th>
         <th></th>
     </tr>
@@ -38,9 +38,9 @@
             @Html.DisplayFor(modelItem => item.Vak.VakNaam)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.VakUrenCollege_Id }) |
+            @Html.ActionLink("Wijzigen", "Edit", new { id=item.VakUrenCollege_Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.VakUrenCollege_Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.VakUrenCollege_Id })
+            @Html.ActionLink("Verwijdern", "Delete", new { id=item.VakUrenCollege_Id })
         </td>
     </tr>
 }

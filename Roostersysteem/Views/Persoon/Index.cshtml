@@ -4,51 +4,51 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Overzicht</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nieuw persoon toevoegen", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.PersoonVoornaam)
+            Voornaam
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PersoonAchternaam)
+            Achternaam
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PersoonTelefoonnummer)
+            Telefoonnummer:
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PersoonEmail)
+            Email:
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PersoonStraat)
+            Straat:
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PersoonHuisnummer)
+            Huisnummer:
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PersoonToevoegingHuisnr)
+            Toevoeging huisnummer:
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PersoonWoonplaats)
+            Woonplaats:
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PersoonPostcode)
+            Postcode:
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PersoonGebruikersnaam)
+            Gebruikersnaam:
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PersoonWachtwoord)
+            Wachtwoord:
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PersoonFunctie)
+            Functie:
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PersoonContractUren)
+            Contacturen
         </th>
         <th></th>
     </tr>
@@ -95,9 +95,9 @@
             @Html.DisplayFor(modelItem => item.PersoonContractUren)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PersoonId }) |
+            @Html.ActionLink("Wijzigen", "Edit", new { id=item.PersoonId }) |
             @Html.ActionLink("Details", "Details", new { id=item.PersoonId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.PersoonId })
+            @Html.ActionLink("Verwijderen", "Delete", new { id=item.PersoonId })
         </td>
     </tr>
 }
