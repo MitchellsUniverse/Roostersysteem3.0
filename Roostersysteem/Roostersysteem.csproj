@@ -278,11 +278,6 @@
     <Content Include="Views\Home\Validatie.cshtml" />
     <Content Include="Views\Home\Hoofdpagina.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Authenticator\Create.cshtml" />
-    <Content Include="Views\Authenticator\Delete.cshtml" />
-    <Content Include="Views\Authenticator\Details.cshtml" />
-    <Content Include="Views\Authenticator\Edit.cshtml" />
-    <Content Include="Views\Authenticator\Index.cshtml" />
     <Content Include="Views\LokaalType\Create.cshtml" />
     <Content Include="Views\LokaalType\Delete.cshtml" />
     <Content Include="Views\LokaalType\Details.cshtml" />
@@ -303,10 +298,6 @@
     <Content Include="Views\PersoonVak\Details.cshtml" />
     <Content Include="Views\PersoonVak\Edit.cshtml" />
     <Content Include="Views\PersoonVak\Index.cshtml" />
-    <Content Include="Views\Rooster\Create.cshtml" />
-    <Content Include="Views\Rooster\Delete.cshtml" />
-    <Content Include="Views\Rooster\Details.cshtml" />
-    <Content Include="Views\Rooster\Edit.cshtml" />
     <Content Include="Views\Rooster\Index.cshtml" />
     <Content Include="Views\UrenBeschikbaarheid\Create.cshtml" />
     <Content Include="Views\UrenBeschikbaarheid\Delete.cshtml" />

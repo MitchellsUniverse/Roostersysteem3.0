@@ -1,51 +1,31 @@
-﻿@model IEnumerable<Roostersysteem.Models.Rooster>
+﻿@model DataSet
+@using System.Data
 
-@{
-    ViewBag.Title = "Index";
-}
+<div class="Col-lg-12">
+    <table class="table">
+        <tr>
+            <th>Vak Code</th>
+            <th>Vak Naam</th>
+            <th>Docent naam</th>
+            <th>Docent achternaam</th>
+            <th>Type Lokaal</th>
+            <th>Begin les</th>
+            <th>Eind Les</th>
+        </tr>
+        @foreach (DataRow row in Model.Tables[0].Rows)
+        {
+            <tr>
+                <td>@row["VakCode"]</td>
+                <td>@row["VakNaam"]</td>
+                <td>@row["PersoonVoornaam"]</td>
+                <td>@row["PersoonAchternaam"]</td>
+                <td>@row["LokaalTypeNaam"]</td>
+                <td>@row["StartTijd"]</td>
+                <td>@row["EindTijd"]</td>
+            </tr>
+        }
 
-<h2>Index</h2>
+    </table>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Klas)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PersoonVak.PersoonVak_Id)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VakLokaalType.VakLokaalType_Id)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VakUrenCollege.VakUrenCollege_Id)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Klas)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PersoonVak.PersoonVak_Id)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VakLokaalType.VakLokaalType_Id)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VakUrenCollege.VakUrenCollege_Id)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RoosterId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RoosterId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RoosterId })
-        </td>
-    </tr>
-}
-
-</table>
